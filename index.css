@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    color: white;
+    display: flex;
+}
+.header--left{
+    flex: 0.5;
+    display: flex;
+}
+.header--left > h2 {
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+span{
+    color: orangered;
+}
+.header--left > .logo {
+    border-radius: 10px;
+    width: 50px;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+h4{
+    font-family: sans-serif;
+    cursor: pointer;
+    margin:auto ;
+    transition: background-color 1s, transform 1s;
+}
+h4:hover{
+    color:black;
+    background-color:greenyellow;
+    padding: 8px 20px;
+    border-radius: 7px;
+    transform: scale(1.1);
+}
+.header--right {
+    display: flex;
+    flex: 0.5;
+    justify-content: space-evenly;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 15px;
+}
+.header--right--button{
+    background-color: greenyellow;
+    padding: 8px 20px;
+    border-radius: 7px;
+    transition: background-color 1s, transform 1s;
+}
+.header--right--button:hover{
+    color: rgb(139, 219, 18);
+    background-color: white;
+    transform: scale(1.1);
+}
+.page{
+    background: url("./wallpaperflare.com_wallpaper (3).jpg") no-repeat center center / cover;
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+.page:before{
+    position: absolute;
+    content: '';
+    background-image: linear-gradient(to right, rgba(32, 40, 119, 0.95), rgba(55, 46, 149, 0.95), rgba(83, 49, 177, 0.90), rgba(114, 48, 205, 0.85), rgba(150, 41, 230, 0.95));
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}    
+.content{
+    display: flex;
+    margin: 50px;
+}
+.content--left{
+    flex:0.6;
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    color: white;
+    font-family: sans-serif;
+}
+.anime {
+    animation-name: color-change;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes color-change{
+    0%{color: red;}
+    25%{color: yellow;}
+    50%{color: lawngreen;}
+    75%{color: magenta;}
+    100%{color: white}
+}
+.content--left > p {
+    font-size: 14px;
+    font-weight: bold;
+}
+.content--left > h3 {
+    margin: 20px auto;
+    color:burlywood;
+}
+.content--left > .greetings{
+    text-align: center ;
+    font-size: 20px;
+}
+.content--right{
+    flex: 0.4;
+    margin: auto;
+    padding-left: 100px;
+}
+.content--right > img {
+    border-radius: 5px;
+    box-shadow: 0 0 10px whitesmoke;
+}
+.footer{
+    color: white;
+    margin:10px 10%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer > .media {
+    border: 2px solid;
+    padding: 5px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    animation: move;
+    animation-duration: 3s;
+    animation-iteration-count:infinite;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+}
+@keyframes move{
+    0%{transform: translateX(0);}
+    25%{transform: translateX(15px);}
+    50%{transform: translateX(0);}
+    75%{transform: translateX(-15px);}
+    100%{transform: translateX(0);}
+}
+.icon{
+    align-items: center;
+    position: relative;
+    top: 3px;
+    left: -5px;
+}
+.light{
+    text-shadow: 0 0 10px greenyellow;
+    color: rgb(0,0,0);
+    font-weight:bolder;
+    font-size: 14px;
+    animation: glow 5s linear infinite;
+    
+}
+@keyframes glow{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
